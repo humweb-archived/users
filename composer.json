@@ -12,9 +12,9 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "humweb/core": "dev-master",
-        "humweb/validation": "dev-master",
-        "humweb/event": "dev-master",
+        "humweb/core": "1.0.*@dev",
+        "humweb/validation": "1.0.*@dev",
+        "humweb/event": "1.0.*@dev",
         "cartalyst/sentry": "2.0.*"
     },
     "autoload": {
