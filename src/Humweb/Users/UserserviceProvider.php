@@ -1,7 +1,7 @@
 <?php namespace Humweb\Users;
 
 use Illuminate\Support\ServiceProvider;
-//use Humweb\Users\EventSubscriber;
+use Humweb\Users\EventSubscriber;
 
 class UsersServiceProvider extends ServiceProvider {
 
@@ -25,11 +25,6 @@ class UsersServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		// $this->app->bindShared('breadcrumbs', function($app)
-		// {
-		// 	return new Breadcrumbs();
-		// });
-		
 		EventSubscriber::register();
 	}
 

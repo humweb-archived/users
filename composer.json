@@ -1,6 +1,6 @@
 {
     "name": "humweb/users",
-    "description": "This package helps to create user managment system the latest sentry auth system",
+    "description": "User auth and admin package (uses sentry)",
     "homepage": "https://github.com/humweb/users",
     "keywords": ["users", "laravel"],
     "license": "MIT",

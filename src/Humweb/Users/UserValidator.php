@@ -5,11 +5,6 @@ use Humweb\Validation\Validation;
 class UserValidator extends Validation {
 
 	protected $rules = [
-	    // 'default' => [
-	    // 	'username' => 'required',
-	    //     'password' => 'required',
-	    //     'email' => 'required|email'
-	    // ],
 	    'login' => [
 	    	'email'    => 'required|min:4|max:32|email',
 			'password' => 'required|min:6'
