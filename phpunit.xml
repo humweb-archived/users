@@ -24,7 +24,7 @@
     </logging>
     
     <testsuites>
-        <testsuite name="Breadcrumbs Package Test Suite">
+        <testsuite name="Users Package Test Suite">
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
