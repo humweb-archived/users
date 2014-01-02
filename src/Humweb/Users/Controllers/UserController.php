@@ -28,9 +28,7 @@ class UserController extends FrontController {
 
 		//Check CSRF token on POST
 		$this->beforeFilter('csrf', array('on' => 'post'));
-		$this->beforeFilter('auth', array('except' => array('getLogin', 'postLogin', 'getRegister', 'postRegister')));
-
-		
+		$this->beforeFilter('auth', array('except' => array('getLogin', 'getLogout', 'postLogin', 'getRegister', 'postRegister')));
 	}
 
 	/**
@@ -169,7 +167,6 @@ class UserController extends FrontController {
 	 */
 	public function getLogin()
 	{
-
 		// Show the register form
 		return View::make('users::users.login');
 	}

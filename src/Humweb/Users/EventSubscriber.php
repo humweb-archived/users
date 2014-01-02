@@ -5,7 +5,8 @@ use Humweb\Event\Subscriber;
 class EventSubscriber extends Subscriber {
 
     protected $listeners = [
-        'user.registered' => 'onUserSignup'
+        'user.registered' => 'onUserSignup',
+        'user.logged.out' => 'onUserLoggedOut'
     ];
 
     public function onUserSignup($user, $data)
@@ -14,6 +15,11 @@ class EventSubscriber extends Subscriber {
         {
             $m->to($user->email)->subject('Signup confirmation email.');
         });
+    }
+
+    public function onUserLoggedOut($user)
+    {
+        
     }
 
 }
