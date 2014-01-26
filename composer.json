@@ -15,7 +15,7 @@
         "humweb/core": "1.0.*@dev",
         "humweb/validation": "1.0.*@dev",
         "humweb/event": "1.0.*@dev",
-        "cartalyst/sentry": "2.0.*"
+        "cartalyst/sentry": "2.1.*"
     },
     "autoload": {
         "psr-0": {
