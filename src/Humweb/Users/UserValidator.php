@@ -7,7 +7,7 @@ class UserValidator extends Validation {
 	protected $rules = [
 	    'login' => [
 	    	'email'    => 'required|min:4|max:32|email',
-			'password' => 'required|min:6'
+			'password' => 'required'
 		],
 	    'register' => [
 			'email'                 => 'required|min:4|max:32|email|unique:users,email',

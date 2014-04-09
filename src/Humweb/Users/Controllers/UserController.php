@@ -185,7 +185,7 @@ class UserController extends FrontController {
 		// Set Validation Rules
 		$rules = array (
 			'email'    => 'required|min:4|max:32|email',
-			'password' => 'required|min:6'
+			'password' => 'required'
 		);
 
 		//Run input validation

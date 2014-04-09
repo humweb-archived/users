@@ -35,12 +35,14 @@ class AdminUserController extends AdminController {
 	{
 
 	    // Find the user using the user id
-	    $data['user'] = $this->current_user;
-
-	    if ($this->current_user->hasAccess('admin'))
+	    $data['group'] = Input::get('group', 'all');
+	    $data['user'] = $this->currentUser;
+		$data['allGroups']  = Sentry::getGroupProvider()->findAll();
+	    if ($this->currentUser->hasAccess('admin'))
 	    {
 			$data['userStatus'] = array();
 			$data['allUsers']   = Sentry::getUserProvider()->findAll();
+
 	    	foreach ($data['allUsers'] as $user)
 	    	{
 
@@ -480,7 +482,7 @@ class AdminUserController extends AdminController {
 			];
 
 		// Admin doesn't need old password
-		if ( ! $this->current_user->hasAccess('admin'))
+		if ( ! $this->currentUser->hasAccess('admin'))
 		{
 			$input['oldPassword'] = Input::get('oldPassword');
 			$rules['oldPassword'] = 'required|min:6';
@@ -501,7 +503,7 @@ class AdminUserController extends AdminController {
 			    
 				//Get the current user's id.
 				Sentry::check();
-				$currentUser = $this->current_user;
+				$currentUser = $this->currentUser;
 
 			   	//Do they have admin access?
 				if ( $currentUser->hasAccess('admin') or $currentUser->getId() == $id)
